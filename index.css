@@ -1,0 +1,80 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+/* primary- #1F1E24*/
+/* secondary- #6556CD*/
+
+
+::-webkit-scrollbar {
+    width: 7px;  /* Width for vertical scrollbars */
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6556cd;  
+    border-radius: 10px;       
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #6556cd;  
+    border-radius: 10px;       
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    padding: 0 0.5em;
+    outline: 0;
+    box-shadow: none;
+    background-color: #1F1E24;
+    color: #fff;
+    cursor: pointer;
+    border: 0 !important;
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+    flex: 1;
+}
+
+/* Hide default arrow in IE */
+select::-ms-expand {
+    display: none;
+}
+
+/* Wrapper for the select box */
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background-color: #1F1E24;
+    overflow: hidden;
+    border-radius: 0.25em;
+}
+
+/* Custom arrow for the dropdown */
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #27272a;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.25s all ease;
+}
+
+/* Hover effect for the custom arrow */
+.select:hover::after {
+    background: #6556cd;
+}
+
+/* Focus style for better accessibility */
+select:focus {
+    border: 2px solid #6556cd;
+    outline: none;
+}
